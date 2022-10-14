@@ -10,6 +10,18 @@ export const getProducts = async (req, res) => {
             message: 'Something goes wrong'
         });
     }
+}
+
+//show all categories
+export const getCategories = async (req, res) => {
+    try {
+        const [result] = await pool.query('SELECT * FROM category');
+        res.json(result);
+    } catch (error) {
+        return res.status(404).json({
+            message: 'Something goes wrong'
+        });
+    }
 
 }
 
