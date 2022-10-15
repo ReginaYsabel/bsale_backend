@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getCategories, getProducts, getProductsbyCategory } from "../controllers/products.controller.js";
+import { getCategories, getProducts, getProductsbyCategory, searchProduct} from "../controllers/products.controller.js";
 const router = Router();
 
 //get all products
@@ -9,6 +9,9 @@ router.get('/products', getProducts);
 router.get('/categories', getCategories);
 
 //get products by category
-router.get('/products/:category', getProductsbyCategory);
+router.get('/category/:category', getProductsbyCategory);
+
+//get product
+router.get('/search/:search', searchProduct);
 
 export default router;

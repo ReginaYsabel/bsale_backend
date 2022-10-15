@@ -39,3 +39,18 @@ export const getProductsbyCategory = async (req, res) => {
         });
     }
 }
+
+//input search
+export const searchProduct = async (req, res) => {
+    try {
+        const [result] = await pool.query('SELECT * FROM product WHERE LOWER(name) LIKE LOWER(?)', ['%'+req.params.search+'%']);
+        if (result.length <= 0) return res.status(404).json({
+            message: 'Product not found'
+        });
+        res.json(result)
+    } catch (error) {
+        return res.status(404).json({
+            message: 'Something goes wrong'
+        });
+    }
+}
