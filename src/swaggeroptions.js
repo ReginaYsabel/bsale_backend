@@ -8,7 +8,7 @@ export const options = {
       },
       servers: [
         {
-          url: "https://bl-backend.herokuapp.com/",
+          url: "https://bl-backend.herokuapp.com",
         },
       ],
     },
