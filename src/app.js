@@ -5,7 +5,7 @@ import cors from "cors";
 //swagger
 import swaggerUI from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
-import { options } from "./swaggerOptions.js";
+import { options } from "./swaggeroptions.js";
 
 const app = express();
 
