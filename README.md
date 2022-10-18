@@ -32,5 +32,9 @@ API REST contruida con Node.js y base de datos MySQL
    ```sh
    npm run dev
    ```
+## Uso
+Documentacion: https://bl-backend.herokuapp.com/docs
+
+
 
 
